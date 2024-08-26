@@ -1,0 +1,359 @@
+:root {    
+    --clr-1: #ffe4d4;
+    --clr-2: #ffc4a8;
+    --clr-3: #ff9b71;
+    --clr-4: #ff5f2e;
+    --clr-5: #fe3f11;
+    --clr-6: #ef2507;
+    --clr-7: #c61608;
+    --clr-8: #9d140f;
+    --clr-9: #7e1410;
+    --clr-10: #440606;
+    --clr-p1:#9d0b0b;
+    --clr-p2:#da2d2d;
+    --clr-p3:#eb8242;
+    --clr-p4:#f4da63;
+    --radius:5px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* border:1px solid blue; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "LXGW WenKai TC", cursive;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color:#2f2f2f;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h1,h2,h3,h4 {
+    line-height: 2;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: #2f2f2f;
+}
+
+/** navbar */
+.navbar {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-image: linear-gradient(red,yellow);
+    z-index: 2;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-title{
+    font-size: 2.5rem;
+    font-weight: bolder;    
+    height: 3rem;
+}
+
+.nav-title a {
+    color: var(--clr-3);
+}
+
+.nav-menu{
+    padding: 1rem;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+}
+
+.nav-link {
+    line-height: normal;
+    padding: 0 2rem;
+    text-align: center;
+    text-decoration: underline var(--clr-3);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background: var(--clr-3);
+    transform: scale(1.1);
+    border-radius: var(--radius);
+}
+
+.nav-link:hover > a {
+    color: #ccc;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: var(--clr-3);
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 15px 15px rgba(68,6,6,0.2);
+} 
+
+.sub-link {
+    display: flex;
+    text-align: left;
+    border-bottom: 1px solid var(--clr-8);
+    padding: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sub-link:last-child{
+    border-bottom: none;
+}
+
+.nav-link:hover > ul{
+    display: block;
+}
+
+.sub-link:hover {
+    background: var(--clr-1);
+    border: 1px solid var(--clr-8);
+    border-radius: 3px;
+}
+
+/** footer */
+.footer{
+    background: var(--clr-10);
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+    margin-top: 0.5rem;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.nav-icon {
+    font-size:1.5rem;
+    margin: 0 0.5rem;
+    color: var(--clr-5);
+    transition:  all 0.3s linear;
+}
+
+.nav-icon:hover {
+    color:var(--clr-p4);
+}
+
+.copyright {
+    text-transform: uppercase;
+    color:var(--clr-1);
+    margin: 0 auto;
+}
+
+/** hero */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    border-top:1px solid red;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.7)),url("../images/barca_barcelona.jpg") center/cover no-repeat;
+    box-shadow: 0 15px 15px rgba(68,6,6,0.2); 
+}
+
+.hero-banner {
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.hero-banner h2 {
+    color: var(--clr-7);
+    letter-spacing: 0.5rem;
+}
+
+/** main container */
+.main {
+    display: flex;
+    justify-content: flex-start;
+    gap:1rem;
+}
+
+/** aside districts menu */
+.district-lists {
+    position: sticky;
+    top:9rem;
+    width: 20%;
+    min-width: 150px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    background: #2f2f2f;
+    border:1px solid var(--clr-4);
+}
+
+.district-list {
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.d-list-oldcity{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url("../images/barca_ciutat_vella.jpg") center/cover no-repeat;
+}
+
+.d-list-eixample{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url("../images/barca_exiample.jpeg") center/cover no-repeat;
+}
+
+.d-list-others{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url("../images/barca_others.jpg") center/cover no-repeat;
+}
+.list-text-c {
+    padding-top: 1rem;
+    margin-bottom: 0;
+    font-weight: bolder;
+    color: #ccc;
+}
+
+.list-text-e {
+    font-weight: bolder;
+    color:transparent;
+}
+
+.district-list:hover p {
+    color:var(--clr-10);
+}
+
+.d-list-oldcity:hover {
+    background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.9)),url("./images/barca_ciutat_vella.jpg") center/cover no-repeat;
+}
+
+.d-list-eixample:hover {
+    background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.9)),url("./images/barca_exiample.jpeg") center/cover no-repeat;
+}
+
+.d-list-others:hover {
+    background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.9)),url("./images/barca_others.jpg") center/cover no-repeat;
+}
+
+/** container */
+.container {
+    width: 80%;
+}
+.section {
+    padding: 2rem 2rem;
+    scroll-margin-top: 8rem; 
+}
+
+/** city intro */
+.city-intro {
+    margin: 0 1rem;
+    padding: 1rem 1.5rem;
+    border: 1rem inset var(--clr-4);
+}
+
+.city-intro h3{
+    border-bottom: 1px solid var(--clr-p2);
+}
+
+/** district */
+.district {
+    margin: 0 1rem;
+}
+
+.sec-title {
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right,rgba(218,45,45),rgba(218,45,45,0.3),rgba(218,45,45));
+}
+
+.sight {
+    border: 3px solid var(--clr-p2);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sight-title {
+    margin-bottom: 0.5rem;
+    color:var(--clr-4); 
+    text-shadow: 1px 1px 2px var(--clr-p3);
+    
+}
+
+.sight-des {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+@media screen and (max-width:992px) {
+    .sight-des {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.sight-text{
+    width: 100%;
+}
+.sight-img {
+    padding: 0 1rem 1.5rem 1rem;
+    width: 100%;
+}
+
+.sight-info{
+    list-style-type: "^";
+    list-style-position: inside;
+}
+
+.sight-info a{
+    color:var(--clr-p2);
+}
+
+.sight-info a:hover{
+    color:var(--clr-p3);
+}

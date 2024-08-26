@@ -1,0 +1,360 @@
+:root {    
+    --clr-1: #ffe4d4;
+    --clr-2: #ffc4a8;
+    --clr-3: #ff9b71;
+    --clr-4: #ff5f2e;
+    --clr-5: #fe3f11;
+    --clr-6: #ef2507;
+    --clr-7: #c61608;
+    --clr-8: #9d140f;
+    --clr-9: #7e1410;
+    --clr-10: #440606;
+    --clr-p1:#9d0b0b;
+    --clr-p2:#da2d2d;
+    --clr-p3:#eb8242;
+    --clr-p4:#f4da63;
+    --radius:5px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* border:1px solid blue; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "LXGW WenKai TC", cursive;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color:#2f2f2f;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h1,h2,h3,h4 {
+    line-height: 2;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: #2f2f2f;
+}
+
+/** navbar */
+.navbar {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-image: linear-gradient(red,yellow);
+    z-index: 2;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-title{
+    font-size: 2.5rem;
+    font-weight: bolder;    
+    height: 3rem;
+}
+
+.nav-title a {
+    color: var(--clr-3);
+}
+
+.nav-menu{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: end;
+}
+
+.nav-link {
+    line-height: normal;
+    padding: 0 2rem;
+    text-align: center;
+    text-decoration: underline var(--clr-3);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background: var(--clr-3);
+    transform: scale(1.1);
+    border-radius: var(--radius);
+}
+
+.nav-link:hover > a {
+    color: #ccc;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: var(--clr-3);
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 15px 15px rgba(68,6,6,0.2);
+} 
+
+.sub-link {
+    display: flex;
+    text-align: left;
+    border-bottom: 1px solid var(--clr-8);
+    padding: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sub-link:last-child{
+    border-bottom: none;
+}
+
+.nav-link:hover > ul{
+    display: block;
+}
+
+.sub-link:hover {
+    background: var(--clr-1);
+    border: 1px solid var(--clr-8);
+    border-radius: 3px;
+}
+
+/** tours menu */
+.tours-menu{
+    height: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+    box-shadow: 0 15px 15px rgba(68,6,6,0.2); 
+}
+
+.tours-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tour-btn {
+    padding-inline: 1rem;
+    margin: 0 0.5rem;
+    border:1px solid var(--clr-7);
+    background: var(--clr-1);
+    border-radius: 5px;
+    color: var(--clr-7);
+}
+
+.tour-btn:hover {
+    background: var(--clr-2);
+}
+
+/** footer */
+.footer{
+    background: var(--clr-10);
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content:center;
+    align-items: end;
+    margin-bottom: 0rem;
+    flex-wrap: wrap;
+}
+
+.nav-icon {
+    font-size:1.5rem;
+    margin: 0 0.5rem;
+    color: var(--clr-5);
+    transition:  all 0.3s linear;
+}
+
+.nav-icon:hover {
+    color:var(--clr-p4);
+}
+
+.copyright {
+    text-transform: uppercase;
+    color:var(--clr-1);
+    margin: 0 auto;
+}
+
+/** hero */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+    width: 100%;
+    border-top:1px solid red;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.7)),url("../images/tours_hero.jpeg") center/cover no-repeat;
+    box-shadow: 0 15px 15px rgba(68,6,6,0.2); 
+}
+
+.hero-banner {
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.hero-banner h1 {
+    color: var(--clr-10);
+    letter-spacing: 0.5rem;
+}
+
+.hero-banner p {
+    min-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--clr-10);
+}
+
+/** tours */
+.tours {
+    padding: 2rem 5rem;
+}
+
+.tour{
+    scroll-margin-top: 10rem; 
+    margin: 2rem 2rem;
+    border-radius: var(--radius);
+    border:1px solid var(--clr-2);
+}
+
+/** tour info */
+.tour-info {
+    border-radius: var(--radius);
+}
+
+.tour-title{
+    padding-left: 1rem;
+    background:rgba(0,0,0,0.1);
+    color:var(--clr-8);
+    border-bottom: 1px solid var(--clr-p3);
+}
+
+/** tour route */
+.tour-route{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    padding-top: 1rem;
+    background:rgba(0,0,0,0.03);
+    border-bottom: 1px solid var(--clr-p3);
+}
+
+.tour-route h5 {
+    padding:0 1rem;
+    color:var(--clr-6);
+}
+
+.tour-route p {
+    color:var(--clr-10)
+}
+
+/** tour detail text */
+.tour-text {
+    padding: 0.5rem 0.5rem;
+    background:rgba(255,228,212,0.1);
+}
+
+/** private tour form */
+.private-tour {
+    padding: 1rem 1rem;
+    margin: 2rem 7rem 6rem 7rem;
+    border-radius: var(--radius);
+    border:1px solid var(--clr-2);
+    background:rgba(0,0,0,0.03);
+}
+
+.private-tour h3{
+    color:var(--clr-8);
+}
+
+.tour-form {
+    width: 50vw;
+    padding: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    padding:0.5rem;
+    font-size: 1.25rem;
+}
+
+input[type="text"] ,input[type="email"], .message{
+    width: 100%;
+    padding: 0.5rem;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-dates {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-date {
+    margin-right: 2rem;
+}
+
+input[type="date"] {
+    padding: 0.5rem;
+}
+
+input[type="submit"] {
+    background: var(--clr-p3);
+    color: var(--clr-1);
+    padding: 1rem 2rem;
+    border:none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background: var(--clr-7);
+}
