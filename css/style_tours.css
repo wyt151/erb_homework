@@ -93,9 +93,26 @@ p {
     color: var(--clr-3);
 }
 
-.nav-menu{
+.nav-toggle {
+    background: transparent;
+    border:none;
+    outline: none;
     padding: 1rem;
-    display: flex;
+    font-size: 1.5rem;
+    color: var(--clr-primary-5);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-toggle:hover {
+    transform: scale(1.2);
+}
+
+.nav-menu{
+    height: 0;
+    padding: 1rem;
+    /* display: flex;  */
+    display: none;
     flex-wrap: wrap; 
     justify-content: center;
     align-items: end;
@@ -118,6 +135,37 @@ p {
 
 .nav-link:hover > a {
     color: #ccc;
+}
+
+
+@media screen and (max-width:576px) {
+    .show-links {
+        position: absolute;
+        top:5rem;
+        height: auto;
+        width: auto;
+        display: flex;
+        background:white;
+        z-index: 999;
+    }
+    .nav-link {
+        padding:0 1rem;
+        font-size:1rem ;
+    }
+}
+    
+@media screen and (min-width:576px) {
+    .nav-toggle {
+        display: none;
+    }
+    .nav-menu {
+        height: auto;
+        display: flex;
+    }
+    .nav-title {
+        height: 4rem;
+    }
+
 }
 
 .sub-menu {
@@ -178,6 +226,12 @@ p {
 
 .tour-btn:hover {
     background: var(--clr-2);
+}
+
+@media screen and (max-width:576px){
+    .tours-links {
+        display: none;
+    }
 }
 
 /** footer */
@@ -246,7 +300,8 @@ p {
 
 /** tours */
 .tours {
-    padding: 2rem 5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
 }
 
 .tour{
@@ -295,11 +350,20 @@ p {
 
 /** private tour form */
 .private-tour {
-    padding: 1rem 1rem;
+    /* margin: 3rem auto; */
+    /* min-width: 400px; */
+    padding: 1rem;
     margin: 2rem 7rem 6rem 7rem;
     border-radius: var(--radius);
     border:1px solid var(--clr-2);
     background:rgba(0,0,0,0.03);
+}
+
+@media screen and (max-width:576px){
+    .private-tour{
+        margin: 2rem auto;
+        width: 400px;
+    }
 }
 
 .private-tour h3{
@@ -307,7 +371,7 @@ p {
 }
 
 .tour-form {
-    width: 50vw;
+    max-width: 50vw;
     padding: 1rem;
 }
 

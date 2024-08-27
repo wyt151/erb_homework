@@ -99,9 +99,27 @@ p {
     color: var(--clr-3);
 }
 
-.nav-menu{
+.nav-toggle {
+    background: transparent;
+    border:none;
+    outline: none;
     padding: 1rem;
-    display: flex; 
+    font-size: 1.5rem;
+    color: var(--clr-primary-5);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-toggle:hover {
+    transform: scale(1.2);
+}
+
+
+.nav-menu{
+    height: 0;
+    padding: 1rem;
+    /* display: flex;  */
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     align-items: end;
@@ -124,6 +142,31 @@ p {
 
 .nav-link:hover > a {
     color: #ccc;
+}
+
+@media screen and (max-width:576px) {
+    .show-links {
+        position: absolute;
+        top:4rem;
+        height: auto;
+        width: auto;
+        display: flex;
+        background:white;
+    }
+    .nav-link {
+        padding:0 1rem;
+        font-size:1rem ;
+    }
+}
+    
+@media screen and (min-width:576px) {
+    .nav-toggle {
+        display: none;
+    }
+    .nav-menu {
+        height: auto;
+        display: flex;
+    }
 }
 
 .sub-menu {

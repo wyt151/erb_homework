@@ -10,3 +10,9 @@ function testing(icon,text) {
         document.getElementById(icon).style.transform = "rotate(0)";
     }
 };
+
+const navBtn = document.getElementById("nav-toggle");
+const links = document.getElementById("nav-menu");
+navBtn.addEventListener("click", ()=>{
+    links.classList.toggle("show-links");
+});
